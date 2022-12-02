@@ -9,7 +9,7 @@ A super-simple, super-light notification bar using jQuery and British humor.
 In cases when you don't really want notifications getting in the way of the every day use of your application, Toasts and Modals are literally the opposite.  We wanted a basic banner notification.  We'll be building on this over time, but here's MVP. 
 
 ## Usage
-Simply include the hat-tip.js or hat-tip.min.js in your progress (or copy the raw code out), add the css you'll find in hat-tip.css, and put the following mark-up at the bottom of your page.
+Simply include the hat-tip.js in your project (or copy the raw code out), add the css you'll find in hat-tip.css, and put the following mark-up at the bottom of your page.
 
 ```html
 <div id="hattip" role="alert">
@@ -18,7 +18,11 @@ Simply include the hat-tip.js or hat-tip.min.js in your progress (or copy the ra
 </div>
 ```
 
-Then, use the following function to update the content of your notification and show it.
+Then, use the `hattip_fire()` function to update the content of your notification and show it.  The function accepts two arguments: a string containing the message, and a string containing the class or classes you would like added to the notification wrapper. 
+
+### Examples
+
+Here's a default example.
 ```js
 hattip_fire('Top of the morning to ya!');
 ```
@@ -43,6 +47,8 @@ You can also include some basic styling in the message, thusly.
 ```js
 hattip_fire('I may be drunk, Miss, but in the morning I will be sober and <b>you will still be ugly.</b>');
 ```
+
+If a second notification is fired while the first is still on the screen, it'll automatically close, clean-up, and fire the new notification. 
 
 ## Changlog
 
