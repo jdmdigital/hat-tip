@@ -8,6 +8,7 @@
 	transition: all 0.35s;
 	transition-delay: 0.1s;
 	padding:15px 90px 15px 30px;
+	margin-bottom:0!important;
 }
 #hattip span, #hattip button{
 	color:rgba(255,255,255,0.95);
