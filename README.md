@@ -38,10 +38,15 @@ hattip_fire('Pub is closed? Nightmare!', 'ht-danger');
 hattip_fire('Pub is open! Ideal.', 'ht-success');
 ```
 
+```js
+hattip_fire('Pub closes at 10pm.', 'ht-info');
+```
+
 The second argument can be any class name you wish.  For example, if you were already using Bootstrap, you could call a success alert with:
 ```js
 hattip_fire('Bootstrap is everywhere.', 'alert alert-success');
 ```
+**NOTE:** You may have to overwrite any additional styles applied from external sources.
 
 You can also include some basic styling in the message, thusly. 
 ```js
