@@ -3,6 +3,7 @@ A super-simple, super-light notification bar using jQuery and British humor.
 
 ![hattip-screenshot](https://user-images.githubusercontent.com/12448527/205358285-049082ff-6d9d-4f9b-9e34-95fd227ccac7.jpg)
 
+### Visit the demo site here: https://jdmdigital.co/demo/hat-tip/
 
 ## Unobtrusive Notifications
 In cases when you don't really want notifications getting in the way of the every day use of your application, Toasts and Modals are literally the opposite.  We wanted a basic banner notification.  We'll be building on this over time, but here's MVP. 
@@ -36,6 +37,11 @@ hattip_fire('Pub is open! Ideal.', 'ht-success');
 The second argument can be any class name you wish.  For example, if you were already using Bootstrap, you could call a success alert with:
 ```js
 hattip_fire('Bootstrap is everywhere.', 'alert alert-success');
+```
+
+You can also include some basic styling in the message, thusly. 
+```js
+hattip_fire('I may be drunk, Miss, but in the morning I will be sober and <b>you will still be ugly.</b>');
 ```
 
 ## Changlog
