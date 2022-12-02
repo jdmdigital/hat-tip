@@ -1,7 +1,7 @@
 # Hat Tip
 A super-simple, super-light notification bar using jQuery and British humor. 
 
-![hattip-screenshot](https://user-images.githubusercontent.com/12448527/205358285-049082ff-6d9d-4f9b-9e34-95fd227ccac7.jpg)
+![hattip-screenshot2](https://user-images.githubusercontent.com/12448527/205378576-36e696ed-ad00-4d21-a911-03541851bf24.jpg)
 
 ### Visit the demo site here: https://jdmdigital.co/demo/hat-tip/
 
