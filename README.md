@@ -39,6 +39,11 @@ The second argument can be any class name you wish.  For example, if you were al
 hattip_fire('Bootstrap is everywhere.', 'alert alert-success');
 ```
 
+You can also include some basic styling in the message, thusly. 
+```js
+hattip_fire('I may be drunk, Miss, but in the morning I will be sober and <b>you will still be ugly.</b>');
+```
+
 ## Changlog
 
 v1.0 - Initial Release
