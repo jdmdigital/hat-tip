@@ -9,7 +9,7 @@ A super-simple, super-light notification bar using jQuery and British humor.
 In cases when you don't really want notifications getting in the way of the every day use of your application, Toasts and Modals are literally the opposite.  We wanted a basic banner notification.  We'll be building on this over time, but here's MVP. 
 
 ## Usage
-Simply include the hat-tip.js in your project (or copy the raw code out), add the css you'll find in hat-tip.css, and put the following mark-up at the bottom of your page.
+Simply include the `hat-tip.js` in your project (or copy the raw code out), add the css you'll find in `hat-tip.css`, and put the following mark-up at the bottom of your page.  Minifed versions of both of those are also included, but their already SUPER-small (the bundle file is only 3kb, uncompressed). 
 
 ```html
 <div id="hattip" role="alert">
@@ -17,6 +17,8 @@ Simply include the hat-tip.js in your project (or copy the raw code out), add th
     <button type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </div>
 ```
+
+Since v1.1, there is also a "bundle" version which does all that for you.  Just include `hat-tip-bundle.js` in your project and it'll add the default CSS and HTML for you.
 
 Then, use the `hattip_fire()` function to update the content of your notification and show it.  The function accepts two arguments: a string containing the message, and a string containing the class or classes you would like added to the notification wrapper. 
 
@@ -58,6 +60,7 @@ If a second notification is fired while the first is still on the screen, it'll 
 ## Changlog
 
 v1.0 - Initial Release
+v1.1 - Adds Minified Versions as well as a "Bundle" option
 
 ![adrian-dascal-aQu92J-TrxY-unsplash-small](https://user-images.githubusercontent.com/12448527/205357306-d46b193b-6f9b-41a3-8e4a-b0252fb58089.jpg)
 
