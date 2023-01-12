@@ -1,4 +1,4 @@
-// Hat-Tip v 1.0
+// Hat-Tip v 1.1
 // https://github.com/jdmdigital/hat-tip
 function hattip_die(){
 	$('#hattip').removeClass('fire');
@@ -32,6 +32,8 @@ function hattip_fire(msg = 'Hello World!',colorClass = 'ht-default'){
 	},hhwaiting);
 }
 
-jQuery('#hattip button').click(function() {
-	hattip_die();
+jQuery(document).ready(function () {
+	jQuery('#hattip button').click(function() {
+		hattip_die();
+	});
 });
