@@ -28,7 +28,7 @@ hattip_fire('Top of the morning to ya!');
 ```
 Notifications can be closed using the "X" button, or programatically by calling `hattip_die()`.
 
-You can also update the classes that give the notification color.  Two such colors are included.
+You can also update the classes that give the notification color.  Three such colors are included in `hat-tip.css`.
 
 ```js
 hattip_fire('Pub is closed? Nightmare!', 'ht-danger');
