@@ -60,6 +60,7 @@ If a second notification is fired while the first is still on the screen, it'll 
 ## Changlog
 
 v1.0 - Initial Release
+
 v1.1 - Adds Minified Versions as well as a "Bundle" option
 
 ![adrian-dascal-aQu92J-TrxY-unsplash-small](https://user-images.githubusercontent.com/12448527/205357306-d46b193b-6f9b-41a3-8e4a-b0252fb58089.jpg)
