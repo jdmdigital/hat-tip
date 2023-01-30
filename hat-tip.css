@@ -1,3 +1,6 @@
+/* Hat-Tip v 1.2
+ * https://github.com/jdmdigital/hat-tip
+ */
 #hattip{
 	position: fixed;
 	display: none;
@@ -9,6 +12,7 @@
 	transition-delay: 0.1s;
 	padding:15px 90px 15px 30px;
 	margin-bottom:0!important;
+	z-index: 88;
 }
 #hattip span, #hattip button{
 	color:rgba(255,255,255,0.95);
@@ -48,11 +52,15 @@
 	opacity: 1;
 	outline: none;
 }
-#hattip.fire{
-	bottom:-1px;
-}
+
 #hattip.display{
 	display: block;
+}
+#hattip.loud{
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 #hattip.ht-success{
 	background-color:rgba(6,134,134,0.95);
@@ -62,4 +70,96 @@
 }
 #hattip.ht-danger{
 	background-color:rgba(225,27,80,0.95);
+}
+
+/* Attention seekers  */
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -20px, 0) scaleY(1.1);
+    transform: translate3d(0, -20px, 0) scaleY(1.1);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -10px, 0) scaleY(1.01);
+    transform: translate3d(0, -10px, 0) scaleY(1.01);
+  }
+
+  80% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0) scaleY(0.99);
+    transform: translate3d(0, 0, 0) scaleY(0.99);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -20px, 0) scaleY(1.1);
+    transform: translate3d(0, -20px, 0) scaleY(1.1);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -10px, 0) scaleY(1.01);
+    transform: translate3d(0, -10px, 0) scaleY(1.01);
+  }
+
+  80% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0) scaleY(0.99);
+    transform: translate3d(0, 0, 0) scaleY(0.99);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+#hattip.fire{
+	bottom:-1px;
+}
+#hattip.fire.loud{
+	-webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+@media screen and (min-width:1170px){
+	#hattip #msg{ 
+		font-size:1.25rem;
+	}
 }
