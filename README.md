@@ -3,7 +3,9 @@ A super-simple, super-light notification bar using jQuery and British humor.
 
 ![hattip-screenshot2](https://user-images.githubusercontent.com/12448527/205378576-36e696ed-ad00-4d21-a911-03541851bf24.jpg)
 
-### Visit the demo site here: https://jdmdigital.co/demo/hat-tip/
+### Live Demo: https://jdmdigital.co/demo/hat-tip/
+
+You can also learn all about why we created Hat Tip in its [announcement post](https://jdmdig.it/3P4eL2X). 
 
 ## Unobtrusive Notifications
 In cases when you don't really want notifications getting in the way of the every day use of your application, Toasts and Modals are literally the opposite.  We wanted a basic banner notification.  We'll be building on this over time, but here's MVP. 
