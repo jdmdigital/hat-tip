@@ -1,42 +1,50 @@
-// Hat-Tip v 1.2
+// Hat-Tip v 1.3 - No jQuery Dependancy
 // https://github.com/jdmdigital/hat-tip
-function hattip_die(){
-	$('#hattip').removeClass('fire loud');
+function hattip_die() {
+    const hattipElement = document.getElementById('hattip');
+    hattipElement.classList.remove('fire', 'loud');
 
-	setTimeout(function() {
-		$('#hattip #msg').html('');
-		$('#hattip').removeAttr('class');
-	},400);
+ 
+
+    setTimeout(function() {
+        const msgElement = document.querySelector('#hattip #msg');
+        msgElement.innerHTML = '';
+        hattipElement.removeAttribute('class');
+    }, 400);
 }
 
-function hattip_fire(msg = 'Hello World!',colorClass = 'ht-default',loud = 'keep-calm'){
-	var hhwaiting = 50;
-	$('#hattip').data('loud',loud);
-	
-	if($('#hattip').hasClass('fire')) {
-		hattip_die();
-		hhwaiting = 500;
-	}
 
-	setTimeout(function() {
-		$('#hattip #msg').html(msg);
-		$('#hattip').addClass(colorClass).addClass('display'); 
-	setTimeout(function() { 
-        if($('#hattip').data('loud') == 'dont-panic') {
-			$('#hattip').addClass('fire loud');
-		} else {
-			$('#hattip').addClass('fire');
-		}
-	}, 30);
+function hattip_fire(msg = 'Hello World!', colorClass = 'ht-default', loud = 'keep-calm') {
+    const hattipElement = document.getElementById('hattip');
+    let hhwaiting = 50;
+    hattipElement.dataset.loud = loud;
 
-	// Auto-hide after 6 seconds if no other notifications are added?
-	/*setTimeout(function() {
-	hattip_die();
-	},6000);*/
+    if (hattipElement.classList.contains('fire')) {
+        hattip_die();
+        hhwaiting = 500;
+    }
 
-	},hhwaiting);
+    setTimeout(function() {
+        const msgElement = document.querySelector('#hattip #msg');
+        msgElement.innerHTML = msg;
+        hattipElement.classList.add(colorClass, 'display');
+
+        setTimeout(function() {
+            if (hattipElement.dataset.loud === 'dont-panic') {
+                hattipElement.classList.add('fire', 'loud');
+            } else {
+                hattipElement.classList.add('fire');
+            }
+        }, 30);
+
+        // Auto-hide after 6 seconds if no other notifications are added?
+        /*setTimeout(function() {
+            hattip_die();
+        }, 6000);*/
+
+    }, hhwaiting);
 }
 
-jQuery('#hattip button').click(function() {
-	hattip_die();
+document.querySelector('#hattip button').addEventListener('click', function() {
+    hattip_die();
 });
